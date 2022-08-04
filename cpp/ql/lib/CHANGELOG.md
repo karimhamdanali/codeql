@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## 0.3.4
 
 ### Deprecated APIs
@@ -14,6 +15,9 @@
 
 * All deprecated predicates/classes/modules that have been deprecated for over a year have been deleted.
 
+=======
+<<<<<<< HEAD
+>>>>>>> cdd3244a90 (Add a test file)
 ## 0.3.3
 
 ### New Features
@@ -32,6 +36,8 @@
 
 * Under certain circumstances a variable declaration that is not also a definition could be associated with a `Variable` that did not have the definition as a `VariableDeclarationEntry`. This is now fixed, and a unique `Variable` will exist that has both the declaration and the definition as a `VariableDeclarationEntry`.
 
+=======
+>>>>>>> 59c7b6be50 (Add a test file)
 ## 0.3.1
 
 ### Minor Analysis Improvements
