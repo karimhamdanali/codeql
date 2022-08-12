@@ -1,0 +1,86 @@
+edges
+| TLS13IsNotUsed.swift:19:7:19:7 | value :  | file://:0:0:0:0 | value |
+| TLS13IsNotUsed.swift:20:7:20:7 | value :  | file://:0:0:0:0 | value |
+| TLS13IsNotUsed.swift:22:7:22:7 | value :  | file://:0:0:0:0 | value |
+| TLS13IsNotUsed.swift:23:7:23:7 | value :  | file://:0:0:0:0 | value |
+| TLS13IsNotUsed.swift:40:47:40:70 | .TLSv10 :  | TLS13IsNotUsed.swift:19:7:19:7 | value :  |
+| TLS13IsNotUsed.swift:45:47:45:70 | .TLSv11 :  | TLS13IsNotUsed.swift:19:7:19:7 | value :  |
+| TLS13IsNotUsed.swift:57:47:57:70 | .TLSv10 :  | TLS13IsNotUsed.swift:20:7:20:7 | value :  |
+| TLS13IsNotUsed.swift:64:40:64:52 | .tlsProtocol10 :  | TLS13IsNotUsed.swift:22:7:22:7 | value :  |
+| TLS13IsNotUsed.swift:76:40:76:52 | .tlsProtocol10 :  | TLS13IsNotUsed.swift:23:7:23:7 | value :  |
+| TLS13IsNotUsed.swift:102:10:102:33 | .TLSv10 :  | TLS13IsNotUsed.swift:111:47:111:64 | call to getBadTLSVersion() |
+| TLS13IsNotUsed.swift:102:10:102:33 | .TLSv10 :  | TLS13IsNotUsed.swift:111:47:111:64 | call to getBadTLSVersion() :  |
+| TLS13IsNotUsed.swift:111:47:111:64 | call to getBadTLSVersion() :  | TLS13IsNotUsed.swift:19:7:19:7 | value :  |
+| TLS13IsNotUsed.swift:121:55:121:66 | version :  | TLS13IsNotUsed.swift:122:47:122:47 | version |
+| TLS13IsNotUsed.swift:121:55:121:66 | version :  | TLS13IsNotUsed.swift:122:47:122:47 | version :  |
+| TLS13IsNotUsed.swift:122:47:122:47 | version :  | TLS13IsNotUsed.swift:19:7:19:7 | value :  |
+| TLS13IsNotUsed.swift:127:25:127:48 | .TLSv11 :  | TLS13IsNotUsed.swift:121:55:121:66 | version :  |
+| TLS13IsNotUsed.swift:158:7:158:7 | self [TLSVersion] :  | file://:0:0:0:0 | self [TLSVersion] :  |
+| TLS13IsNotUsed.swift:158:7:158:7 | value :  | file://:0:0:0:0 | value :  |
+| TLS13IsNotUsed.swift:163:3:163:3 | [post] def [TLSVersion] :  | TLS13IsNotUsed.swift:165:47:165:47 | def [TLSVersion] :  |
+| TLS13IsNotUsed.swift:163:20:163:43 | .TLSv10 :  | TLS13IsNotUsed.swift:158:7:158:7 | value :  |
+| TLS13IsNotUsed.swift:163:20:163:43 | .TLSv10 :  | TLS13IsNotUsed.swift:163:3:163:3 | [post] def [TLSVersion] :  |
+| TLS13IsNotUsed.swift:165:47:165:47 | def [TLSVersion] :  | TLS13IsNotUsed.swift:158:7:158:7 | self [TLSVersion] :  |
+| TLS13IsNotUsed.swift:165:47:165:47 | def [TLSVersion] :  | TLS13IsNotUsed.swift:165:47:165:51 | .TLSVersion |
+| TLS13IsNotUsed.swift:165:47:165:47 | def [TLSVersion] :  | TLS13IsNotUsed.swift:165:47:165:51 | .TLSVersion :  |
+| TLS13IsNotUsed.swift:165:47:165:51 | .TLSVersion :  | TLS13IsNotUsed.swift:19:7:19:7 | value :  |
+| file://:0:0:0:0 | self [TLSVersion] :  | file://:0:0:0:0 | .TLSVersion :  |
+| file://:0:0:0:0 | value :  | file://:0:0:0:0 | [post] self [TLSVersion] :  |
+nodes
+| TLS13IsNotUsed.swift:19:7:19:7 | value :  | semmle.label | value :  |
+| TLS13IsNotUsed.swift:20:7:20:7 | value :  | semmle.label | value :  |
+| TLS13IsNotUsed.swift:22:7:22:7 | value :  | semmle.label | value :  |
+| TLS13IsNotUsed.swift:23:7:23:7 | value :  | semmle.label | value :  |
+| TLS13IsNotUsed.swift:40:47:40:70 | .TLSv10 | semmle.label | .TLSv10 |
+| TLS13IsNotUsed.swift:40:47:40:70 | .TLSv10 :  | semmle.label | .TLSv10 :  |
+| TLS13IsNotUsed.swift:45:47:45:70 | .TLSv11 | semmle.label | .TLSv11 |
+| TLS13IsNotUsed.swift:45:47:45:70 | .TLSv11 :  | semmle.label | .TLSv11 :  |
+| TLS13IsNotUsed.swift:57:47:57:70 | .TLSv10 | semmle.label | .TLSv10 |
+| TLS13IsNotUsed.swift:57:47:57:70 | .TLSv10 :  | semmle.label | .TLSv10 :  |
+| TLS13IsNotUsed.swift:64:40:64:52 | .tlsProtocol10 | semmle.label | .tlsProtocol10 |
+| TLS13IsNotUsed.swift:64:40:64:52 | .tlsProtocol10 :  | semmle.label | .tlsProtocol10 :  |
+| TLS13IsNotUsed.swift:76:40:76:52 | .tlsProtocol10 | semmle.label | .tlsProtocol10 |
+| TLS13IsNotUsed.swift:76:40:76:52 | .tlsProtocol10 :  | semmle.label | .tlsProtocol10 :  |
+| TLS13IsNotUsed.swift:102:10:102:33 | .TLSv10 :  | semmle.label | .TLSv10 :  |
+| TLS13IsNotUsed.swift:111:47:111:64 | call to getBadTLSVersion() | semmle.label | call to getBadTLSVersion() |
+| TLS13IsNotUsed.swift:111:47:111:64 | call to getBadTLSVersion() :  | semmle.label | call to getBadTLSVersion() :  |
+| TLS13IsNotUsed.swift:121:55:121:66 | version :  | semmle.label | version :  |
+| TLS13IsNotUsed.swift:122:47:122:47 | version | semmle.label | version |
+| TLS13IsNotUsed.swift:122:47:122:47 | version :  | semmle.label | version :  |
+| TLS13IsNotUsed.swift:127:25:127:48 | .TLSv11 :  | semmle.label | .TLSv11 :  |
+| TLS13IsNotUsed.swift:158:7:158:7 | self [TLSVersion] :  | semmle.label | self [TLSVersion] :  |
+| TLS13IsNotUsed.swift:158:7:158:7 | value :  | semmle.label | value :  |
+| TLS13IsNotUsed.swift:163:3:163:3 | [post] def [TLSVersion] :  | semmle.label | [post] def [TLSVersion] :  |
+| TLS13IsNotUsed.swift:163:20:163:43 | .TLSv10 :  | semmle.label | .TLSv10 :  |
+| TLS13IsNotUsed.swift:165:47:165:47 | def [TLSVersion] :  | semmle.label | def [TLSVersion] :  |
+| TLS13IsNotUsed.swift:165:47:165:51 | .TLSVersion | semmle.label | .TLSVersion |
+| TLS13IsNotUsed.swift:165:47:165:51 | .TLSVersion :  | semmle.label | .TLSVersion :  |
+| file://:0:0:0:0 | .TLSVersion :  | semmle.label | .TLSVersion :  |
+| file://:0:0:0:0 | [post] self [TLSVersion] :  | semmle.label | [post] self [TLSVersion] :  |
+| file://:0:0:0:0 | self [TLSVersion] :  | semmle.label | self [TLSVersion] :  |
+| file://:0:0:0:0 | value | semmle.label | value |
+| file://:0:0:0:0 | value | semmle.label | value |
+| file://:0:0:0:0 | value | semmle.label | value |
+| file://:0:0:0:0 | value | semmle.label | value |
+| file://:0:0:0:0 | value :  | semmle.label | value :  |
+subpaths
+| TLS13IsNotUsed.swift:163:20:163:43 | .TLSv10 :  | TLS13IsNotUsed.swift:158:7:158:7 | value :  | file://:0:0:0:0 | [post] self [TLSVersion] :  | TLS13IsNotUsed.swift:163:3:163:3 | [post] def [TLSVersion] :  |
+| TLS13IsNotUsed.swift:165:47:165:47 | def [TLSVersion] :  | TLS13IsNotUsed.swift:158:7:158:7 | self [TLSVersion] :  | file://:0:0:0:0 | .TLSVersion :  | TLS13IsNotUsed.swift:165:47:165:51 | .TLSVersion |
+| TLS13IsNotUsed.swift:165:47:165:47 | def [TLSVersion] :  | TLS13IsNotUsed.swift:158:7:158:7 | self [TLSVersion] :  | file://:0:0:0:0 | .TLSVersion :  | TLS13IsNotUsed.swift:165:47:165:51 | .TLSVersion :  |
+#select
+| TLS13IsNotUsed.swift:40:47:40:70 | .TLSv10 | TLS13IsNotUsed.swift:40:47:40:70 | .TLSv10 | TLS13IsNotUsed.swift:40:47:40:70 | .TLSv10 | TLS 1.3 should be used (from case_2()) |
+| TLS13IsNotUsed.swift:45:47:45:70 | .TLSv11 | TLS13IsNotUsed.swift:45:47:45:70 | .TLSv11 | TLS13IsNotUsed.swift:45:47:45:70 | .TLSv11 | TLS 1.3 should be used (from case_3()) |
+| TLS13IsNotUsed.swift:57:47:57:70 | .TLSv10 | TLS13IsNotUsed.swift:57:47:57:70 | .TLSv10 | TLS13IsNotUsed.swift:57:47:57:70 | .TLSv10 | TLS 1.3 should be used (from case_5()) |
+| TLS13IsNotUsed.swift:64:40:64:52 | .tlsProtocol10 | TLS13IsNotUsed.swift:64:40:64:52 | .tlsProtocol10 | TLS13IsNotUsed.swift:64:40:64:52 | .tlsProtocol10 | TLS 1.3 should be used (from case_6()) |
+| TLS13IsNotUsed.swift:76:40:76:52 | .tlsProtocol10 | TLS13IsNotUsed.swift:76:40:76:52 | .tlsProtocol10 | TLS13IsNotUsed.swift:76:40:76:52 | .tlsProtocol10 | TLS 1.3 should be used (from case_8()) |
+| TLS13IsNotUsed.swift:111:47:111:64 | call to getBadTLSVersion() | TLS13IsNotUsed.swift:102:10:102:33 | .TLSv10 :  | TLS13IsNotUsed.swift:111:47:111:64 | call to getBadTLSVersion() | TLS 1.3 should be used (from getBadTLSVersion()) |
+| TLS13IsNotUsed.swift:122:47:122:47 | version | TLS13IsNotUsed.swift:127:25:127:48 | .TLSv11 :  | TLS13IsNotUsed.swift:122:47:122:47 | version | TLS 1.3 should be used (from case_14()) |
+| TLS13IsNotUsed.swift:165:47:165:51 | .TLSVersion | TLS13IsNotUsed.swift:163:20:163:43 | .TLSv10 :  | TLS13IsNotUsed.swift:165:47:165:51 | .TLSVersion | TLS 1.3 should be used (from case_18()) |
+| file://:0:0:0:0 | value | TLS13IsNotUsed.swift:40:47:40:70 | .TLSv10 :  | file://:0:0:0:0 | value | TLS 1.3 should be used (from case_2()) |
+| file://:0:0:0:0 | value | TLS13IsNotUsed.swift:45:47:45:70 | .TLSv11 :  | file://:0:0:0:0 | value | TLS 1.3 should be used (from case_3()) |
+| file://:0:0:0:0 | value | TLS13IsNotUsed.swift:57:47:57:70 | .TLSv10 :  | file://:0:0:0:0 | value | TLS 1.3 should be used (from case_5()) |
+| file://:0:0:0:0 | value | TLS13IsNotUsed.swift:64:40:64:52 | .tlsProtocol10 :  | file://:0:0:0:0 | value | TLS 1.3 should be used (from case_6()) |
+| file://:0:0:0:0 | value | TLS13IsNotUsed.swift:76:40:76:52 | .tlsProtocol10 :  | file://:0:0:0:0 | value | TLS 1.3 should be used (from case_8()) |
+| file://:0:0:0:0 | value | TLS13IsNotUsed.swift:102:10:102:33 | .TLSv10 :  | file://:0:0:0:0 | value | TLS 1.3 should be used (from getBadTLSVersion()) |
+| file://:0:0:0:0 | value | TLS13IsNotUsed.swift:127:25:127:48 | .TLSv11 :  | file://:0:0:0:0 | value | TLS 1.3 should be used (from case_14()) |
+| file://:0:0:0:0 | value | TLS13IsNotUsed.swift:163:20:163:43 | .TLSv10 :  | file://:0:0:0:0 | value | TLS 1.3 should be used (from case_18()) |
