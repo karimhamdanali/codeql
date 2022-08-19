@@ -4,9 +4,10 @@
  */
 
 private import codeql.ruby.AST
+private import codeql.ruby.Concepts
 private import codeql.ruby.DataFlow
 private import codeql.ruby.controlflow.CfgNodes
-private import codeql.ruby.Concepts
+private import codeql.ruby.frameworks.core.Kernel
 
 /**
  * Provides default sources, sinks and sanitizers for detecting stack trace
@@ -35,6 +36,13 @@ module StackTraceExposure {
       ) and
       this.getMethodName() = ["backtrace", "backtrace_locations"]
     }
+  }
+
+  /**
+   * A call to `Kernel#caller`, considered as a flow source.
+   */
+  class CallerCall extends Source, Kernel::KernelMethodCall {
+    CallerCall() { this.getMethodName() = "caller" }
   }
 
   /**
