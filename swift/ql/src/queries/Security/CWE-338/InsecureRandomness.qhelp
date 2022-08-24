@@ -1,0 +1,52 @@
+<!DOCTYPE qhelp PUBLIC
+        "-//Semmle//qhelp//EN"
+        "qhelp.dtd">
+<qhelp>
+    <overview>
+        <p>Using a system call to cryptographically weak pseudo-random number generator (PNRG) like <code>rand</code> or
+            <code>random</code>
+            and then using that in a security context can lead to allowing attacks leveraging the predictability of
+            the random values.
+        </p>
+    </overview>
+    <recommendation>
+        <p>Use
+            <code>
+                <a href="https://developer.apple.com/documentation/swift/int/random(in:)-9mjpw">
+                    random(in:)
+                </a>
+            </code>
+            or
+            <code>
+                <a href="https://developer.apple.com/documentation/security/1399291-secrandomcopybytes">
+                    SecRandomCopyBytes(_:_:_:)
+                </a>
+            </code>
+            which produce cryptographically strong random data.
+        </p>
+    </recommendation>
+    <example>
+
+        <p>In the following example, a system call <code>srand</code> is used to seed the number generator with the
+            current date and then <code>rand</code> is used to generate a session ID.
+        </p>
+
+        <sample src="InsecureRandomnessBad.swift"/>
+
+        <p>This is dangerous because for starters the seed is predictable (<a
+                href="https://cwe.mitre.org/data/definitions/337.html">CWE-337</a>) and any way the PNRG employed is not
+            cryptographically strong, so an attacker could predict a session ID and interfere with or spoof the session.
+        </p>
+
+        <p>The standard integer class method can be used, which is backed by a cryptographically strong PRNG:</p>
+        <sample src="InsecureRandomnessGood.swift"/>
+
+    </example>
+    <references>
+
+        <li>
+            <a href="https://cwe.mitre.org/data/definitions/338.html">CWE-338</a>
+        </li>
+
+    </references>
+</qhelp>
