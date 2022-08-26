@@ -41,8 +41,8 @@ module StackTraceExposure {
   /**
    * A call to `Kernel#caller`, considered as a flow source.
    */
-  class CallerCall extends Source, Kernel::KernelMethodCall {
-    CallerCall() { this.getMethodName() = "caller" }
+  class KernelCallerCall extends Source, Kernel::KernelMethodCall {
+    KernelCallerCall() { this.getMethodName() = "caller" }
   }
 
   /**
