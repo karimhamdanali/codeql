@@ -3,7 +3,7 @@
  * vulnerabilities.
  *
  * Note, for performance reasons: only import this file if
- * `StackTraceExposure::Configuration` is needed, otherwise
+ * `StackTraceExposure::Configuration` is needed; otherwise,
  * `StackTraceExposureCustomizations` should be imported instead.
  */
 
