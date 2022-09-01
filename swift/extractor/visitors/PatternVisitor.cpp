@@ -17,7 +17,7 @@ void PatternVisitor::visitTypedPattern(swift::TypedPattern* pattern) {
   auto label = dispatcher_.assignNewLabel(pattern);
   assert(pattern->getSubPattern() && "expect TypedPattern to have a SubPattern");
   dispatcher_.emit(TypedPatternsTrap{label, dispatcher_.fetchLabel(pattern->getSubPattern())});
-  if (auto typeRepr = pattern->getTypeRepr()) {
+  if (auto typeRepr = pattern->getTypeRepr(); typeRepr && pattern->hasType()) {
     dispatcher_.emit(TypedPatternTypeReprsTrap{
         label, dispatcher_.fetchLabel(pattern->getTypeRepr(), pattern->getType())});
   }
