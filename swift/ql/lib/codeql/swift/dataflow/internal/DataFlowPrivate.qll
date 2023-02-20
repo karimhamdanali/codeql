@@ -687,9 +687,34 @@ predicate additionalLambdaFlowStep(Node nodeFrom, Node nodeTo, boolean preserves
  */
 predicate allowParameterReturnInSelf(ParameterNode p) { none() }
 
+private predicate fieldHasApproxName(FieldDecl f, string s) { s = f.getName().charAt(0) }
+
+cached
+private newtype TContentApprox = TFieldApproxContent(string s) { fieldHasApproxName(_, s) }
+
 /** An approximated `Content`. */
-class ContentApprox = Unit;
+class ContentApprox extends TContentApprox {
+  string toString() { none() } // overriden in subclasses
+}
+
+private class FieldApproxContent extends ContentApprox, TFieldApproxContent {
+  string s;
+
+  FieldApproxContent() { this = TFieldApproxContent(s) }
+
+  FieldDecl getAField() { fieldHasApproxName(result, s) }
+
+  string getPrefix() { result = s }
+
+  final override string toString() { result = s }
+}
 
 /** Gets an approximated value for content `c`. */
 pragma[inline]
-ContentApprox getContentApprox(Content c) { any() }
+ContentApprox getContentApprox(Content c) {
+  exists(string prefix, FieldDecl f |
+    prefix = result.(FieldApproxContent).getPrefix() and
+    f = c.(Content::FieldContent).getField() and
+    fieldHasApproxName(f, prefix)
+  )
+}
